@@ -1,5 +1,8 @@
 #include "holberton.h"
-
+/**
+* main - main
+* Return: 0
+*/
 int main(void)
 {
 _putchar('H');
@@ -12,5 +15,5 @@ _putchar('t');
 _putchar('o');
 _putchar('n');
 _putchar('\n');
-	return (0);
+return (0);
 }
