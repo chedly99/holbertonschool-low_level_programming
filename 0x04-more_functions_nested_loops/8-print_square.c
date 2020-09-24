@@ -5,17 +5,17 @@
 */
 void print_square(int size)
 {
-int i = 0;
-int j = 0;
+int i;
+int j;
 if (size > 0)
 {
-while (size > i)
-j = 0;
-while (size > j)
+for (i = 1; i <= size; i++)
 {
-_putchar('#');
-j++;
+for (j = 1; j <= size; j++)
+_putchar ('#');
+_putchar ('\n');
 }
 }
-_putchar('\n');
+else
+_putchar ('\n');
 }
