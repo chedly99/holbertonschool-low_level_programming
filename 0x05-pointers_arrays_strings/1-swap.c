@@ -1,13 +1,13 @@
 #include "holberton.h"
 /**
-* swap_in - swap in 
+*swap_int - swap_int
 *@a: int
 *@b: int
-*@n:
+*@n: int
 */
 void swap_int(int *a, int *b)
 {
-int p = *a;
+int n = *a;
 *a = *b;
 *b = n;
 }
