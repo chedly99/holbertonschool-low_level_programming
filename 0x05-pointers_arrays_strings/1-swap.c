@@ -3,11 +3,11 @@
 *swap_int - swap_int
 *@a: int
 *@b: int
-*@n: int
+*@p:
 */
 void swap_int(int *a, int *b)
 {
-int n = *a;
+int p = *a;
 *a = *b;
-*b = n;
+*b = p;
 }
