@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
-*puts2 - print an even string
-*@str: string to print
+*puts_half - prints half a string
+*@str: string
 */
 void puts_half(char *str)
 {
