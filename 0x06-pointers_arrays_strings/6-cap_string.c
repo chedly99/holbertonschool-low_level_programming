@@ -1,27 +1,28 @@
-#include "holberton.h"
 /**
 *cap_string - capitalise letters
-*@s: string
+*@a: string
 *Return: char
 */
-char *cap_string(char *s)
+char *cap_string(char *a)
 {
 int i = 0, j;
 char ch[] = " \t\n,;.!?\"(){}";
-while (s[i] != '\0')
+while (a[i] != '\0')
+{
+if (a[i] >= 'a' && a[i] <= 'z')
+{
+if (i == 0)
+a[i] -= 32;
+else
 {
 for (j = 0; ch[j] != '\0'; j++)
 {
-if (s[i] == ch[j])
-{
-if (s[i + 1] >= 'a' && s[i]  <= 'z')
-{
-s[i + 1] -= 32;
-break;
+if (ch[j] == a[i - 1])
+a[i] -= 32;
 }
 }
 }
 i++;
 }
-return (s);
+return (a);
 }
