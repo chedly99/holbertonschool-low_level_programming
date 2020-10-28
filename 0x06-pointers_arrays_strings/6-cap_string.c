@@ -6,14 +6,22 @@
 */
 char *cap_string(char *s)
 {
-int i;
-for (i = 0; s[i] != '\0' ; i++)
+int i = 0, j;
+char ch[] = " \t\n,;.!?\"(){}";
+while (s[i] != '\0')
 {
-if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',' || s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?' || s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
+for (j = 0; ch[j] != '\0'; j++)
+{
+if (s[i] == ch[j])
 {
 if (s[i + 1] >= 'a' && s[i]  <= 'z')
+{
 s[i + 1] -= 32;
+break;
 }
+}
+}
+i++;
 }
 return (s);
 }
