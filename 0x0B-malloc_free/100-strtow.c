@@ -1,12 +1,14 @@
-#include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
+
 /**
-**strtow - string tow
-* @str: string
-* Return: nothing
+* **strtow - function that splits a string into words.
+* @str : pointer
 */
+
 char **strtow(char *str)
 {
-return (0);
+if (str == NULL)
+return (NULL);
+return(0);
 }
