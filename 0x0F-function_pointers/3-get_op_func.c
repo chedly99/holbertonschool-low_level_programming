@@ -1,10 +1,11 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "3-calc.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 /**
-*get_op_func - pointer to a function
+*get_op_func - function 
 *@s: char
-*Return: integer
+*Return: int
 */
 int (*get_op_func(char *s))(int, int)
 {
@@ -16,16 +17,16 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-int i;
+int i = 0;
 
 while (ops[i].op != NULL)
 {
-if (s == *ops[i].op)
+if (*s == *ops[i].op && strlen(s) == 1)
 {
 return (ops[i].f);
+}
 i++;
 }
 printf("Error\n");
 exit(99);
-return(0);
 }
