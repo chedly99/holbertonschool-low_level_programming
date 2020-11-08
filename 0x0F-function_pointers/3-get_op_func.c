@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 /**
-*get_op_func - function 
+*get_op_func - operator
 *@s: char
 *Return: int
 */
