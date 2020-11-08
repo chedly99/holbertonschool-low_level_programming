@@ -1,6 +1,6 @@
-#include "calc.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "3-calc.h"
 /**
 *op_add - sums integers
 *@a: integer

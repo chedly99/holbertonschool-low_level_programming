@@ -1,6 +1,6 @@
-#include "calc.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "3-calc.h"
 /**
 *get_op_func - pointer to a function
 *@s: char
@@ -20,12 +20,12 @@ int i;
 
 while (ops[i].op != NULL)
 {
-if (*s == ops[i].op)
+if (s == *ops[i].op)
 {
 return (ops[i].f);
-}
-i++
+i++;
 }
 printf("Error\n");
-exit(99)
+exit(99);
+return(0);
 }
