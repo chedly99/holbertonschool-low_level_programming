@@ -2,23 +2,18 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
-* print_numbers - Prints numbers, followed by a new line.
-* @separator: The string to be printed between numbers.
-* @n: The number of integers passed to the function.
-* @...: A variable number of numbers to be printed.
+* print_numbers - Prints number,
+* @separator: The string to be printed
+* @n: number of integers
+* @...: variable number
 */
-void print_numbers(const char *separator, const unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
-va_list i;
-unsigned int j;
-
-va_start(i, n);
-for (j = 0; j < n; j++)
-{
-printf("%d", va_arg(i, int));
-if (j != (n - 1) && separator != NULL)
-printf("%s", separator);
-}
-printf("\n");
-va_end(i);
+va_list nums;
+unsigned int index, sum = 0;
+va_start(nums, n);
+for (index = 0; index < n; index++)
+sum += va_arg(nums, int);
+va_end(nums);
+return (sum);
 }
