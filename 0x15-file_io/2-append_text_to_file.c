@@ -3,7 +3,7 @@
 *append_text_to_file - Appends text at a file.
 *@filename: poiner to name
 *@text_content: string
-* Return:
+*Return:1
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
@@ -16,7 +16,8 @@ for (len = 0; text_content[len]; len++)
 }
 o = open(filename, O_WRONLY | O_APPEND);
 w = write(o, text_content, len);
-
-close(o)
+if (0 == -1 || w == -1)
+return(-1)
+close(o);
 return (1);
 }
