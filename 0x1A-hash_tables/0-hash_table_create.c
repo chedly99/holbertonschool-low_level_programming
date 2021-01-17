@@ -14,6 +14,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (ptotable == NULL)
 		return (NULL);
 
+	ptotable->size = size;
+	ptotable->array = malloc(sizeof(hash_node_t *) * size);
+
 	while (i < ptotable->size)
 	{
 		ptotable->array[i] = NULL;
