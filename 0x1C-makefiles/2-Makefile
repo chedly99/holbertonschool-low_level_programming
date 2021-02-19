@@ -1,0 +1,12 @@
+#Makeafile2
+
+CC = gcc
+
+SRC = main.c holberton.c
+
+OBJ = $(SRCS:%.c=%.o)
+
+NAME = holberton
+
+all: $(OBJ)
+	$(CC) $(SRC) $(OBJ) -o $(NAME)
